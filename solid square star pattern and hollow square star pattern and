@@ -1,0 +1,58 @@
+#include<iostream>
+using namespace std;
+
+void Solid_Pattern( int size,char ur){
+for(int i=0; i<size; i++ )
+{
+	
+	for(int u=0; u<size; u++)
+	{
+		
+		cout<<ur;
+	}
+
+cout<<endl;
+}
+}
+
+
+void  Hollow_Pattern(int size, char a)
+{
+	for(int y=0; y<size; y++){
+		
+		for(int i=0; i<size; i++)
+		{
+			
+			if((y==0)||(y==(size-1))){
+				cout<<a;
+			}
+			else if((i==0)||(i==(size-1)))
+			{
+				cout<<a;
+			}
+			else {
+				cout<<" ";
+			}
+			
+		}
+		cout<<endl;
+	}	
+}
+int main(){
+
+int size;
+
+cin>>size; //length of the squre
+
+char a;
+
+cin>>a; // char which you want to show  example  
+          // *,4,l,# ... any thing
+
+
+
+Solid_Pattern(size,a);  //function call solid pattern
+cout<<endl;
+Hollow_Pattern(size,a); //function call hollow pattern
+}
+
