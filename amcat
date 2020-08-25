@@ -1,0 +1,70 @@
+# include<iostream>
+using namespace std;
+int main(){
+
+int a=0;
+int b=0;
+// enter the  length of the list1 and list
+cin>>a;
+cin>>b;
+
+
+int list1[a];  //list 1
+int list2[b];  //list 2
+
+
+cout<<"list1"<<endl;
+
+                            //enter the value one by one into the list1
+for(int i=0; i<a; i++)
+{
+	cin>>list1[i];
+}
+cout<<"list2"<<endl;
+
+                                  //enter the value one by one into the list2
+for(int ii=0; ii<b; ii++)
+{
+	cin>>list2[ii];
+}
+
+
+
+int c=0;
+
+
+for(int y=0; y<a; y++)
+{
+
+for(int q=0; q<b; q++){
+
+if(list1[y]==list2[q]){
+	c++;
+	break;
+}
+}
+}
+
+int count=a-c;
+
+c=0;
+
+for(int y=0; y<b; y++)
+{
+
+for(int q=0; q<a; q++){
+
+if(list2[y]==list1[q]){
+	c++;
+	break;
+}
+}
+}
+
+
+count=(count+(b-c));
+                                                                            //output
+cout<<"letters which is present only one time in the array  "<<count;
+return 0;
+}
+
